@@ -1,0 +1,34 @@
+### Campus VLAN Networks
+
+| VLAN | Network | Subnet Mask | Default Gateway |
+|---|---|---|---|
+| 10 | Engineering Faculty/Staff | 172.16.10.0/24 | 172.16.10.254 |
+| 20 | Engineering Students | 172.16.20.0/24 | 172.16.20.254 |
+| 30 | Business Faculty/Staff | 172.16.30.0/24 | 172.16.30.254 |
+| 40 | Business Students | 172.16.40.0/24 | 172.16.40.254 |
+| 50 | Library Public | 172.16.50.0/24 | 172.16.50.254 |
+| 60 | Library Staff/Admin | 172.16.60.0/24 | 172.16.60.254 |
+| 99 | Management | 172.16.99.0/24 | 172.16.99.254 |
+
+### Branch Network
+
+| Network | Subnet Mask | Default Gateway |
+|---|---|---|
+| Branch LAN | 192.168.70.0/24 | 192.168.70.254 |
+
+### Router and Transit Networks
+
+| Connection | Network | Device Addresses |
+|---|---|---|
+| CORE-SW ↔ CORE-RTR | 10.255.255.0/30 | CORE-SW: 10.255.255.1 / CORE-RTR: 10.255.255.2 |
+| CORE-RTR ↔ ISP-RTR | 203.0.113.0/30 | ISP-RTR: 203.0.113.1 / CORE-RTR: 203.0.113.2 |
+| ISP-RTR ↔ BRANCH-RTR | 203.0.114.0/30 | ISP-RTR: 203.0.114.1 / BRANCH-RTR: 203.0.114.2 |
+
+### Server Networks and Addresses
+
+| Device | IP Address | Network |
+|---|---|---|
+| DNS Server | 172.16.99.10 | 172.16.99.0/24 |
+| Web Server | 172.16.99.20 | 172.16.99.0/24 |
+| File Server | 172.16.99.30 | 172.16.99.0/24 |
+| DHCP Server | 172.16.99.40 | 172.16.99.0/24 |
